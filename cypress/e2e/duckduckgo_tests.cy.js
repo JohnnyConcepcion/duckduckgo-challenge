@@ -15,7 +15,7 @@ describe('DuckDuckGo Search Tests', () => {
 
   it('Test case 2 - Verify All Regions Count', () => {
     SearchPage.getSearchInput().type('android{enter}');
-    ResultsPage.getRegionSelector().click();
+    ResultsPage.RegionSelectorbtn().click();
     ResultsPage.getRegionList().find('div')
     .should('have.length.greaterThan', 10)
     .then((divs) => {
